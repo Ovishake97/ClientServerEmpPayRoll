@@ -3,7 +3,6 @@
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../css/newEmpPayRoll.css">
-       
         <title>Employee paroll form</title>
     </head>
     <body>
@@ -18,12 +17,13 @@
     </div>
     </header>
     <div class="form-content">
-        <form class="form" action="#" onsubmit="save();return false">
+        <form class="form" action="#" onreset="resetForm();" onsubmit="save();">
         <div class="form-head">
             employee payroll form</div>
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
-                <input class="input" type="text" id="name" name="name" placeholder="Your name.." required>
+                <input class="input" type="text" id="name" name="name" placeholder="Your name..">
+                <error-output class="text-error" for="text"></error-output>
             </div>
             <div class="row-content"> 
                 <label class="label text" for="profile">Profile image</label>
@@ -50,22 +50,22 @@
             <div class="row-content">
                 <label class="label text" for="department">Department</label>
                 <div> 
-                    <input class="checkbox" type="checkbox" id="hr" name="hr" value="HR">
+                    <input class="checkbox" type="checkbox" id="hr" name="department" value="HR">
                     <label class="text" for="hr">HR</label> 
-                    <input class="checkbox" type="checkbox" id="sales" name="sales" value="Sales">
+                    <input class="checkbox" type="checkbox" id="sales" name="department" value="Sales">
                     <label class="text" for="sales">Sales</label>
-                    <input class="checkbox" type="checkbox" id="finance" name="finance" value="Finance">
+                    <input class="checkbox" type="checkbox" id="finance" name="department" value="Finance">
                     <label class="text" for="finance">Finance</label> 
-                    <input class="checkbox" type="checkbox" id="engineer" name="engineer" value="Engineer"> 
+                    <input class="checkbox" type="checkbox" id="engineer" name="department" value="Engineer"> 
                     <label class="text" for="engineer">Engineer</label> 
-                    <input class="checkbox" type="checkbox" id="others" name="others" value="Others">
+                    <input class="checkbox" type="checkbox" id="others" name="department" value="Others">
                     <label class="text" for="others">Others</label>
                 </div> 
             </div>
             <div class="row-content"> 
                 <label class="label text" for="salary">Choose your salary: </label> 
                 <input class="input" type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000">
-                <output class="salary—output text" for="salary">400000</output> 
+                <output class="salary-output text" for="salary">400000</output> 
             </div> 
            
         <div class="row-content">
@@ -89,7 +89,7 @@
                <option value="15">15</option> 
                </select>
                
-               <select id-="month" name="Month">
+               <select id="month" name="Month">
                     <option value="Jan">January</option>
                     <option value="Feb">Febuary</option>
                     <option value="March">March</option>
@@ -115,12 +115,12 @@
                 
                 <div class="row-content">
                     <label class="label text" for="notes">Notes</label> 
-                    <textarea id="notes" class="input" name="Notes" placeholder="" style="height:100px"></textarea>
+                    <textarea id="notes" class="input" name="Notes" placeholder="notes" style="height:100px"></textarea>
                 </div> 
                 <div class="buttonParent">
                     <a href="./home.html" class="resetButton button cancelButton">Cancel</a>
                     <div class="submIt-reset">
-                        <button type="submit" class="button submitButton" td="submitButton">Submit</button>
+                        <button type="submit" class="button submitButton" id="submitButton">Submit</button>
                         <button type="reset" class="resetButton button">Reset</button>
                     </div> 
                 </div> 
@@ -128,6 +128,8 @@
                 
                
         </form>
+        <script src="../js/newEmpPayRoll.js"></script>
+        <script src="../js/EmployeePayRoll.js"></script>
         </div>
     </body>
 </html>
