@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             return;
         }
         try {
-            (new EmployeePayRoll()).name = name.value;
+            checkName(name.value);
             setTextValue('.text-error', "");
         } catch (e) {
             setTextValue('.text-error', e);
@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         let startDate = getInputValueById('#day')+" "+getInputValueById('#month')+" "+
                       getInputValueById('#year') ;
         try {
-            (new EmployeePayRoll()).startDate = new Date(Date.parse(startDate));
+            checkStartDate(new Date(Date.parse(startDate)));
             setTextValue('.date-error', "");
         } catch (e) {
             setTextValue('.date-error', e);
@@ -33,7 +33,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     salary.addEventListener('input', function() {
         setTextValue('.salary-output', salary.value);
     });
-
+    document.querySelector('.cancelButton').href = site_properties.home_page;
     checkForUpdate();
 });
 
@@ -45,15 +45,39 @@ const save = (event) =>
     event.stopPropagation();
     try {
         setEmployeePayrollObject(); 
-        createAndUpdateStorage();
-        resetForm();
-        window.location.replace(site_properties.home_page);
+        if (site_properties.use_local_storage.match("true")) {
+            createAndUpdateStorage();
+            resetForm();
+            window.location.replace(site_properties.home_page);
+        } else {
+            createOrUpdateEmployeePayroll();
+        }
     } catch (e) {
         return;
     }
 } 
 
+const createOrUpdateEmployeePayroll = () =>  {    
+    let postURL = site_properties.server_url;
+    let methodCall = "POST";
+    if(isUpdate) {
+        methodCall = "PUT";
+        postURL = postURL + employeePayrollObj.id.toString();
+    }
+    makeServiceCall(methodCall, postURL, true, employeePayrollObj)
+      .then(responseText => {
+        resetForm();
+        window.location.replace(site_properties.home_page);
+      })
+      .catch(error => {
+        throw error;
+      });
+}
+
 const setEmployeePayrollObject = () => {
+    if(!isUpdate && site_properties.use_local_storage.match("true")) {
+        employeePayrollObj.id = createNewEmployeeId();
+    }
     employeePayrollObj._name = getInputValueById('#name');
     employeePayrollObj._profilePic = getSelectedValues('[name=profile]').pop();
     employeePayrollObj._gender = getSelectedValues('[name=gender]').pop();
@@ -66,22 +90,22 @@ const setEmployeePayrollObject = () => {
 }
 
 const createAndUpdateStorage = () => {
-    let employeePayrollList = JSON.parse(localStorage.getItem("EmployeePayrollList"));
+    let employeePayrollList = JSON.parse(localStorage.getItem("EmployeePayrollList1"));
     if(employeePayrollList){
         let empPayrollData = employeePayrollList.
-                             find(empData => empData._id == employeePayrollObj._id);
+                             find(empData => empData.id == employeePayrollObj.id);
         if (!empPayrollData) {
-            employeePayrollList.push(createEmployeePayrollData());
+            employeePayrollList.push(empPayrollData);
         } else {
             const index = employeePayrollList
-                          .map(empData => empData._id)
-                          .indexOf(empPayrollData._id);
-            employeePayrollList.splice(index, 1, createEmployeePayrollData(empPayrollData._id));
+                          .map(empData => empData.id)
+                          .indexOf(empPayrollData.id);
+            employeePayrollList.splice(index, 1, empPayrollData);
         }
     } else{
-        employeePayrollList = [createEmployeePayrollData()]
+        employeePayrollList = [empPayrollData]
     }
-    localStorage.setItem("EmployeePayrollList", JSON.stringify(employeePayrollList))
+    localStorage.setItem("EmployeePayrollList1", JSON.stringify(employeePayrollList))
 }
 
 const createEmployeePayrollData = (id) => {
