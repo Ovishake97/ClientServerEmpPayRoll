@@ -1,0 +1,14 @@
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\Repository\bin\Debug\Repository.dll.config
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\Repository\bin\Debug\Repository.dll
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\Repository\bin\Debug\Repository.pdb
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\Repository\bin\Debug\Common.dll
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\Repository\bin\Debug\EntityFramework.dll
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\Repository\bin\Debug\Common.pdb
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\Repository\bin\Debug\EntityFramework.xml
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\Repository\obj\Debug\Repository.csprojAssemblyReference.cache
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\Repository\obj\Debug\Repository.csproj.CoreCompileInputs.cache
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\Repository\obj\Debug\Repository.csproj.CopyComplete
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\Repository\obj\Debug\Repository.dll
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\Repository\obj\Debug\Repository.pdb

@@ -1,0 +1,5 @@
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\Common\bin\Debug\Common.dll
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\Common\bin\Debug\Common.pdb
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\Common\obj\Debug\Common.dll
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\Common\obj\Debug\Common.pdb

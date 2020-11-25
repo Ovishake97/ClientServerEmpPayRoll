@@ -1,0 +1,14 @@
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\BusinessLogicApp\obj\Debug\BusinessLogicApp.csprojAssemblyReference.cache
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\BusinessLogicApp\obj\Debug\BusinessLogicApp.csproj.CoreCompileInputs.cache
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\BusinessLogicApp\bin\Debug\BusinessLogicApp.dll
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\BusinessLogicApp\bin\Debug\BusinessLogicApp.pdb
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\BusinessLogicApp\bin\Debug\Common.dll
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\BusinessLogicApp\bin\Debug\Repository.dll
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\BusinessLogicApp\bin\Debug\EntityFramework.dll
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\BusinessLogicApp\bin\Debug\Common.pdb
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\BusinessLogicApp\bin\Debug\Repository.pdb
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\BusinessLogicApp\bin\Debug\Repository.dll.config
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\BusinessLogicApp\bin\Debug\EntityFramework.xml
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\BusinessLogicApp\obj\Debug\BusinessLogicApp.csproj.CopyComplete
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\BusinessLogicApp\obj\Debug\BusinessLogicApp.dll
+C:\Users\Pavithra N S\source\repos\WcfServiceEmployeeManagementApp\BusinessLogicApp\obj\Debug\BusinessLogicApp.pdb
